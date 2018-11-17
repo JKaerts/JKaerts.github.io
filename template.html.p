@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>◊(select 'h1 doc)</title>
+    <title>◊(select 'h3 doc)</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="stijl.css">
   </head>
   <body>
+    <header>
+      <h1>Jonas Kaerts</h1>
+      <nav>
+        <a href="./documenten.html">schrijfsels</a>
+        -
+        <a href="./links.html">links</a>
+        -
+        <a href="./over.html">over</a>
+      </nav>
+      <hr/></header>
   ◊(->html doc)
   </body>
 </html>

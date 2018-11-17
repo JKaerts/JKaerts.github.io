@@ -1,5 +1,5 @@
 #lang pollen
-◊h1{Wiskundige Documenten}
+◊topic{Wiskundige Documenten}
 
 
 Ik ben vaak op zoek naar interessante wiskundige problemen die mij helpen de wereld om mij heen te verklaren. Soms moeten dit zelfs geen praktisch nuttige dingen zijn. Zoeken naar verschillenden manieren om een concept uit te leggen kan ook al vruchten afwerpen i.v.m. het ontwikkelen van een beter begrip. Volgende zaken heb ik reeds uitgetypt en zet ik hier beschikbaar voor iedereen die er nood aan zou hebben.

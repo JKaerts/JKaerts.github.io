@@ -10,4 +10,27 @@ body{
 
 h1,h2,h3{
     line-height:1.2
-    }
+}
+
+
+.tooltip {
+    display: inline;
+    position: relative;
+    cursor: pointer;
+    border: solid 1px black;
+}
+
+.tooltip-inner {
+    visibility: hidden;
+    position: absolute;
+    background: #999;
+    cursor: pointer;
+    padding: 1em;
+    color: white;
+    border-radius: 0.5em;
+}
+
+.tooltip_visible .tooltip-inner {
+    visibility: visible;
+    right: -1px; bottom: 1rem;
+}

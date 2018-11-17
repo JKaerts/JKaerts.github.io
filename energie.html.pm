@@ -1,5 +1,5 @@
 #lang pollen
-◊header{◊h1{Energie, explosies en eten}}
+◊topic{Energie, explosies en eten}
 
 
 Op 30 oktober 1961, tijdens de Koude Oorlog, bracht de Sovjetunie een kernwapen tot ontploffing op een testsite in Nova Zembla. Deze bom kreeg de bijnaam ‘Tsar Bomba’ ofwel tsarenbom. Met een energie van 50 megaton was de Tsar Bomba krachtiger dan alle explosieven samen die tijdens de Tweede Wereldoorlog gebruikt werden (inclusief de twee atoombommen op Hiroshima en Nagasaki). Maar hoe groot is 50 megaton eigenlijk? 

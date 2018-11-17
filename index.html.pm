@@ -1,13 +1,9 @@
 #lang pollen
 
-◊header{◊h1{Jonas' Homepage}}
+◊topic{Welkom!}
 
-Welkom op mijn website. Hier kan je voornamelijk dingen vinden die ik interessant vind om te delen of dingen die ik heb uitgewerkt en uitgetypt. Meestal gaat het hier over wiskundige zaken van verschillende niveaus.
+Ik ben Jonas. Overdag ben ik praktijkassistent aan de KU Leuven. In mijn vrije tijd ben ik recreatief programmeur.
 
-Wat is hier allemaal terug te vinden?
-◊ul{
-    ◊li{◊a[#:href "./documenten.html"]{Korte documenten} met uitwerkingen van (wiskundige) problemen die ik interessant vind.}
-    ◊li{◊a[#:href "./links.html"]{Links} naar aan te raden websites, videos, ...}
-}
+Hier schrijf ik korte exposities neer over vanalles. Meestal over wiskunde en programmeren en meestal meer voor mezelf dan voor anderen.
 
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The subgroup criterion</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+    </script>
+    <link rel="stylesheet" href="stijl.css">
+  </head>
+  <body>
+    <header>
+      <h1>Jonas Kaerts</h1>
+      <nav>
+        <a href="./documenten.html">schrijfsels</a>
+        -
+        <a href="./links.html">links</a>
+        -
+        <a href="./over.html">over</a>
+      </nav>
+      <hr/></header>
+  <div id="doc"><h3 class="topic">The subgroup criterion</h3><p>This page is an exper­i­ment in grad­ual expo­si­tion for a maths proof.</p><p><strong>The­o­rem:</strong> Let <mathjax>$H$</mathjax> be a non­empty sub­set of a group <mathjax>$G,*$</mathjax>.
+The fol­low­ing three state­ments are equiv­a­lent:
+</p><ol><li><mathjax>$H$</mathjax> is a sub­group of <mathjax>$G,*$</mathjax>.</li><p>
+</p><li><mathjax>$\forall x, y\in H: x*y\in H \text{ and } x^{-1}\in H$</mathjax></li><p>
+</p><li><mathjax>$\forall x, y\in H: x*y^{-1}\in H$</mathjax></li></ol><p><em>Proof:</em> We first show that the sec­ond state­ment fol­lows from the first. This is imme­di­ate from the def­i­n­i­tion of a group.</p><p>Now we show that the third state­ment fol­lows from the sec­ond.
+Take <mathjax>$x, y\in H$</mathjax>.
+Because <mathjax>$y$</mathjax> lies in <mathjax>$H$</mathjax>, also <mathjax>$y^{-1}$</mathjax> lies in <mathjax>$H$</mathjax>.
+There­fore <mathjax>$x*y^{-1}$</mathjax> must also lie in <mathjax>$H$</mathjax>.</p><p>Finally we show that the first state­ment fol­lows from the third.
+Take an ele­ment <mathjax>$h\in H$</mathjax>.
+It is then given that <mathjax>$h*h^{-1}=e\in H$</mathjax>.
+Now that we now <mathjax>$e$</mathjax> lies in <mathjax>$H$</mathjax> we get for free that <span class="tooltip" onclick="this.classList.toggle('tooltip_visible')">+<span class="tooltip-inner"><span class="no-hyphens">since <mathjax>$x^{-1} = e*x^{-1}$</mathjax></span></span></span> for any <mathjax>$x\in H$</mathjax>, that <mathjax>$x^{-1}$</mathjax> also lies in $H$.
+For ran­dom <mathjax>$x, y\in H$</mathjax>, there­fore, we know that <mathjax>$x$</mathjax> and <mathjax>$y$</mathjax> lie in <mathjax>$H$</mathjax> and hence
+<mathjax>$$x*(y^{-1})^{-1} = x*y\in H.$$</mathjax>
+This proves that <mathjax>$*$</mathjax> is a binary oper­a­tion on <mathjax>$H$</mathjax>.
+This oper­a­tion is asso­cia­tive
+<span class="tooltip" onclick="this.classList.toggle('tooltip_visible')">+<span class="tooltip-inner"><span class="no-hyphens">Since <mathjax>$*$</mathjax> is an asso­cia­tive oper­a­tion on <mathjax>$G$</mathjax>, for every <mathjax>$x,y,z\in G$</mathjax> we have that
+<mathjax>$$(x*y)*z = x*(y*z).$$</mathjax>
+This fact remains when <mathjax>$x$</mathjax>, <mathjax>$y$</mathjax> and <mathjax>$z$</mathjax> belong to <mathjax>$H$</mathjax>.</span></span></span>
+and <mathjax>$e$</mathjax> is a neu­tral ele­ment for <mathjax>$*$</mathjax>.
+More­over, every ele­ment <mathjax>$x\in H$</mathjax> has an inverse which also belongs to <mathjax>$H$</mathjax>.
+This proves that <mathjax>$H$</mathjax> is a group.</p></div>
+  </body>
+</html>
