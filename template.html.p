@@ -18,10 +18,14 @@
         -
         <a href="./links.html">links</a>
         -
-        <a href="./over.html">over</a>
+        <a href="./about.html">over</a>
       </nav>
       <hr/></header>
-  ◊(->html doc)
+    ◊(->html doc)
+    <footer>
+      <hr />
+      <a href="./index.html">Terug naar af</a>
+    </footer>
   </body>
 </html>
 

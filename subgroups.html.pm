@@ -3,6 +3,7 @@
 ◊topic{The subgroup criterion}
 
 This page is an experiment in gradual exposition for a maths proof.
+Try clicking on the plus-signs near the end of the proof.
 
 ◊strong{Theorem:} Let ◊${H} be a nonempty subset of a group ◊${G,*}.
 The following three statements are equivalent:
