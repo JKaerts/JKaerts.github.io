@@ -10,6 +10,13 @@
     </script>
     <link rel="stylesheet" href="stijl.css">
   </head>
+
+  <!-- Mathjax configuration commands -->
+  $
+  \def\R{\mathbb{R}}
+  \def\C{\mathbb{C}}
+  \def\dd#1{\mathrm{d}#1}
+  $
   <body>
     <header>
       <h1>Jonas Kaerts</h1>
@@ -22,17 +29,15 @@
       </nav>
       <hr/></header>
     <div id="doc"><h3 class="topic">The subgroup criterion</h3><p>This page is an exper­i­ment in grad­ual expo­si­tion for a maths proof.
-Try click­ing on the plus-signs near the end of the proof.</p><p><strong>The­o­rem:</strong> Let <mathjax>$H$</mathjax> be a non­empty sub­set of a group <mathjax>$G,*$</mathjax>.
+Try click­ing on the plus-signs near the end of the proof.</p><div class="theorem-body"><p><span class="theorem-title">The­o­rem.</span> Let <mathjax>$H$</mathjax> be a non­empty sub­set of a group <mathjax>$G,*$</mathjax>.
 The fol­low­ing three state­ments are equiv­a­lent:
-</p><ol><li><mathjax>$H$</mathjax> is a sub­group of <mathjax>$G,*$</mathjax>.</li><p>
-</p><li><mathjax>$\forall x, y\in H: x*y\in H \text{ and } x^{-1}\in H$</mathjax></li><p>
-</p><li><mathjax>$\forall x, y\in H: x*y^{-1}\in H$</mathjax></li></ol><p><em>Proof:</em> We first show that the sec­ond state­ment fol­lows from the first. This is imme­di­ate from the def­i­n­i­tion of a group.</p><p>Now we show that the third state­ment fol­lows from the sec­ond.
+</p><ol><li><p><mathjax>$H$</mathjax> is a sub­group of <mathjax>$G,*$</mathjax>.</p></li><li><p><mathjax>$\forall x, y\in H: x*y\in H$</mathjax> and <mathjax>$x^{-1}\in H$</mathjax></p></li><li><p><mathjax>$\forall x, y\in H: x*y^{-1}\in H$</mathjax></p></li></ol></div><p><em>Proof:</em> We first show that the sec­ond state­ment fol­lows from the first. This is imme­di­ate from the def­i­n­i­tion of a group.</p><p>Now we show that the third state­ment fol­lows from the sec­ond.
 Take <mathjax>$x, y\in H$</mathjax>.
 Because <mathjax>$y$</mathjax> lies in <mathjax>$H$</mathjax>, also <mathjax>$y^{-1}$</mathjax> lies in <mathjax>$H$</mathjax>.
 There­fore <mathjax>$x*y^{-1}$</mathjax> must also lie in <mathjax>$H$</mathjax>.</p><p>Finally we show that the first state­ment fol­lows from the third.
 Take an ele­ment <mathjax>$h\in H$</mathjax>.
 It is then given that <mathjax>$h*h^{-1}=e\in H$</mathjax>.
-Now that we now <mathjax>$e$</mathjax> lies in <mathjax>$H$</mathjax> we get for free that <span class="tooltip" onclick="this.classList.toggle('tooltip_visible')">+<span class="tooltip-inner"><span class="no-hyphens">since <mathjax>$x^{-1} = e*x^{-1}$</mathjax></span></span></span> for any <mathjax>$x\in H$</mathjax>, that <mathjax>$x^{-1}$</mathjax> also lies in $H$.
+Now that we know <mathjax>$e$</mathjax> lies in <mathjax>$H$</mathjax> we get for free that <span class="tooltip" onclick="this.classList.toggle('tooltip_visible')">+<span class="tooltip-inner"><span class="no-hyphens">since <mathjax>$x^{-1} = e*x^{-1}$</mathjax></span></span></span> for any <mathjax>$x\in H$</mathjax>, that <mathjax>$x^{-1}$</mathjax> also lies in $H$.
 For ran­dom <mathjax>$x, y\in H$</mathjax>, there­fore, we know that <mathjax>$x$</mathjax> and <mathjax>$y$</mathjax> lie in <mathjax>$H$</mathjax> and hence
 <mathjax>$$x*(y^{-1})^{-1} = x*y\in H.$$</mathjax>
 This proves that <mathjax>$*$</mathjax> is a binary oper­a­tion on <mathjax>$H$</mathjax>.

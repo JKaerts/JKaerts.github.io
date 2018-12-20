@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Complex functions of a real variable</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+    </script>
+    <link rel="stylesheet" href="stijl.css">
+  </head>
+
+  <!-- Mathjax configuration commands -->
+  $
+  \def\R{\mathbb{R}}
+  \def\C{\mathbb{C}}
+  \def\dd#1{\mathrm{d}#1}
+  $
+  <body>
+    <header>
+      <h1>Jonas Kaerts</h1>
+      <nav>
+        <a href="./documenten.html">schrijfsels</a>
+        -
+        <a href="./links.html">links</a>
+        -
+        <a href="./about.html">over</a>
+      </nav>
+      <hr/></header>
+    <div id="doc"><h3 class="topic">Complex functions of a real variable</h3><p>Just like a real func­tion of a real vari­able, we can con­sider com­plex func­tions of a real vari­able.
+These are func­tions of the form
+<mathjax>$$f\colon I \subseteq \R \to \C \colon t \mapsto f(t).$$</mathjax>
+Let's call these func­tions CRV-func­tions (Com­plex func­tions of a Real Vari­able).</p><p>Why are we look­ing at these func­tions? Because we can look at dif­fer­en­tial equa­tions of CRV-func­tions.</p><p>We con­sider such a func­tion <mathjax>$f$</mathjax> to be <em>dif­fer­en­tiable</em> at a point <mathjax>$t$</mathjax> if the limit
+<mathjax>$$\lim_{h \to 0} \frac{f(t+h) - f(t)}{h}$$</mathjax>
+exists in <mathjax>$\C$</mathjax>.
+This limit is then denoted by <mathjax>$f'(t)$</mathjax>.</p><p>The shape of this limit, the dif­fer­ence quo­tient, is exactly the same as for real func­tions of a real vari­able.
+Do we need to develop an entirely new the­ory of dif­fer­en­ti­a­tion for CRV func­tions? Not if we're clever about it.
+Every com­plex num­ber has a real part and an imag­i­nary part.
+Because <mathjax>$f(t)$</mathjax> is a com­plex num­ber we can find two real num­bers <mathjax>$u(t)$</mathjax> and <mathjax>$v(t)$</mathjax> such that
+<mathjax>$$f(t) = u(t) + iv(t)$$</mathjax>
+This means that there are two real func­tions of a real vari­able (<mathjax>$u$</mathjax> and <mathjax>$v$</mathjax>) such that <mathjax>$f = u+iv$</mathjax>.</p><p>Using this nota­tion we can see that (if every­thing works out nicely)
+<mathjax>$$\begin{align*}
+f'(t) &amp;= \lim_{h\to 0} \frac{f(t+h)-f(t)}{h}\\
+      &amp;= \lim_{h\to 0} \frac{u(t+h)-u(t)}{h} + i\frac{v(t+h)-v(t)}{h}\\
+      &amp;= u'(t) + iv'(t)
+\end{align*}$$</mathjax>
+The func­tion <mathjax>$f$</mathjax> is there­fore dif­fer­en­tiable (in the CRV sense) if both <mathjax>$u$</mathjax> and <mathjax>$v$</mathjax> are (in the ordi­nary sense) and there is a sim­ple rela­tion­ship between their deriv­a­tives.</p><p>In gen­eral we can state that
+<mathjax>$$\begin{align*}
+f(t) &amp;= u(t)+iv(t)\\
+f'(t) &amp;= u'(t) + iv'(t)\\
+f''(t) &amp;= u''(t) + iv''(t)\\
+f^{(3)}(t) &amp;= u^{(3)}(t) + iv^{(3)}(t)\\
+\end{align*}$$</mathjax>
+and so on.</p><p>Now we can look at dif­fer­en­tial equa­tions of CRV-func­tions.
+Because we have given mean­ing to the con­cept of the deriv­a­tive of a CRV-func­tion, it makes sense to ask if there exists a CRV-func­tion <mathjax>$f$</mathjax> such that
+<mathjax>$$f'' + f = 0.$$</mathjax>
+Again, like in the real case we can look for expo­nen­tial solu­tions to this equa­tion.
+We try to find <mathjax>$r\in\C$</mathjax> such that <mathjax>$t\mapsto e^{rt}$</mathjax> is a solu­tion to the equa­tion.
+In that case <mathjax>$r$</mathjax> has to sat­isfy --- like in the real case --- the char­ac­ter­is­tic equa­tion
+<mathjax>$r^2 + 1 = 0$</mathjax>
+so <mathjax>$r$</mathjax> is equal to <mathjax>$i$</mathjax> or <mathjax>$-i$</mathjax>.
+The gen­eral solu­tion to the dif­fer­en­tial equa­tion is there­fore
+<mathjax>$$f(t) = Ae^{it} + Be^{-it}$$</mathjax>
+for two con­stants <mathjax>$A$</mathjax> and <mathjax>$B$</mathjax>.</p></div>
+    <footer>
+      <hr />
+      <a href="./index.html">Terug naar af</a>
+    </footer>
+  </body>
+</html>
