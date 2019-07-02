@@ -1,6 +1,9 @@
 #lang pollen
 ◊topic{Schrijfsels}
 
-◊ul{
-◊li{◊a[#:href "./subgroups.html"]{Experiment on gradual exposition (EN)}}
+◊bullet-list{
+◊a[#:href "./subgroups.html"]{Experiment on gradual exposition (EN)}
+
+
+◊a[#:href "./tikz_dsl_1.html"]{Creating a small DSL in TikZ (part 1) (EN)}
 }
