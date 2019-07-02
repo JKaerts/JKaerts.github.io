@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Creating a small DSL in TikZ, part 1: The primitives</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+    </script>
+    <link rel="stylesheet" href="stijl.css">
+  </head>
+
+  <!-- Mathjax configuration commands -->
+  $
+  \def\R{\mathbb{R}}
+  \def\C{\mathbb{C}}
+  \def\dd#1{\mathrm{d}#1}
+  $
+  <body>
+    <header>
+      <h1>Jonas Kaerts</h1>
+      <nav>
+        <a href="./documenten.html">schrijfsels</a>
+        -
+        <a href="./links.html">links</a>
+        -
+        <a href="./about.html">over</a>
+      </nav>
+      <hr/></header>
+    <div id="doc"><h3 class="topic">Creating a small DSL in TikZ, part 1: The primitives</h3><h4 class="heading">Background</h4><p>For a class on lin­ear alge­bra we added a part on lin­ear sys­tem the­ory a few years ago.
+The notes for this part came from an exist­ing set of course notes writ­ten in MS Word.
+The text was eas­ily added to our La­TeX source files but the fig­ures proved a prob­lem.
+These pic­tures were bitmaps, drawn by the author using a sim­ple draw­ing pro­gram.
+An exam­ple of such a draw­ing is given below.</p><p><img src=".\images\system_old.jpg"/></p><p>This kind of dia­gram con­sists of two tanks of water, con­nected through pipes.
+At both ends and in the mid­dle there are three valves (the bowties with a T on top) which con­trol the flow of water.
+At the top are two taps which sup­ply new water.</p><p>Look­ing at the draw­ing and the con­text, there are three prob­lems I wanted to solve.</p><ul><li><p>There is no quick and easy way to pro­duce such a dia­gram. This is impor­tant in cre­at­ing exam ques­tions where we want to adjust the dia­gram a lit­tle or cre­ate a new one from scratch.</p></li><li><p>The lines do not con­nect cleanly. Between the two tanks, the lines of the pipes over­lap with the valve.</p></li><li><p>The font of the anno­ta­tions is dif­fer­ent from the font used in the text. This makes for some incon­sis­tent design.</p></li></ul><p>Although only the first point <em>must</em> be fixed, it will be the case that our solu­tion will take care of all three prob­lems at once.
+The macros that we will define here are only pos­si­ble because of TikZ's abil­ity to han­dle trans­forms of fig­ures.
+In gen­eral the approach we use here will work with any draw­ing sys­tem capa­ble of arbi­trary affine trans­forms.
+In the case of TeX-based sys­tems, these include Meta­Post, Asymp­tote and (as we'll use here) TikZ.</p><h4 class="heading">The primitive elements</h4><p>A dia­gram like in the exam­ple can be bro­ken down into the fol­low­ing parts:
+</p><ul><li><p>a tank of water, filled a given amount,</p></li><li><p>a pipe seg­ment, which can be arbi­trary long,</p></li><li><p>a valve,</p></li><li><p>a tap, which can be added onto a pipe.</p></li></ul><p>
+Since our draw­ing sys­tem includes arbi­trary affine trans­forms, we can cer­tainly scale and trans­late parts of our draw­ing.
+This allows us to make macros for sim­ple ver­sions of each com­po­nent, which can be scaled and trans­lated as needed.
+Let's put this idea into prac­tice.</p><p><subsection>A tank of water</subsection></p><p>We will define a macro <tt>\draw­tank</tt> which takes one manda­tory and one optional argu­ment.
+The goal is to make the com­mand <tt>\draw­tank{0.3}</tt> draw a tank of 1cm by 1cm which is 30% filled with water.
+The optional argu­ment allows us to pass argu­ments to the tikz draw­ing com­mands.
+This way we can use <tt>\draw­tank{0.7}[shift={(1cm, 2cm)}, xscale=2, yscale=4]</tt> to draw a tank of 2cm by 4cm, 70% filled, with its lower left cor­ner at the coor­di­nates (1cm, 2cm).</p><p>How do we imple­ment this macro? In order to effi­ciently han­dle optional argu­ments we can use the pack­age <tt>xparse</tt>.</p><pre>\New­Doc­u­ment­Com­mand{\draw­tank}{ m o }{%
+  \def\tank{(0,1) -- (0,0) -- (1,0) -- (1,1)}
+  \def\water{(1,#1) -- (0,#1)}
+  \If­Val­ueTF{#2}
+    {\draw[#2] \tank; \draw[#2] \water;}
+    {\draw \tank; \draw \water;}
+}</pre></div>
+    <footer>
+      <hr />
+      <a href="./index.html">Terug naar af</a>
+    </footer>
+  </body>
+</html>
