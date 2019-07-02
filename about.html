@@ -10,6 +10,13 @@
     </script>
     <link rel="stylesheet" href="stijl.css">
   </head>
+
+  <!-- Mathjax configuration commands -->
+  $
+  \def\R{\mathbb{R}}
+  \def\C{\mathbb{C}}
+  \def\dd#1{\mathrm{d}#1}
+  $
   <body>
     <header>
       <h1>Jonas Kaerts</h1>
