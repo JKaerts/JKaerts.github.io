@@ -69,6 +69,8 @@
           ,@elements)))
 
 (define-theorem theorem Theorem)
+(define-theorem exercise Exercise)
+(define-theorem solution Solution)
 
 ;;Exposition
 (define (exposition . elements)
