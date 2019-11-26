@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Basic equations of motion</title>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+    <script type="text/javascript">
+      window.MathJax = {
+        tex: {
+          macros: {
+            R: "{\\mathbb{R}}",
+            C: "{\\mathbb{C}}",
+            dd: "{\\mathrm{d}}",
+            diff: ["{\\frac{\\dd #1 }{\\dd #2 }}", 2],
+            odiff: ["{\\frac{\\dd^{#1} #2}{\\dd #3^{#1}}}", 3]
+          }
+        }
+      };
+    </script>
+    <link rel="stylesheet" href="stijl.css">
+  </head>
+  <body>
+    <header>
+      <h1>Jonas Kaerts</h1>
+      <nav>
+        <a href="./documenten.html">schrijfsels</a>
+        -
+        <a href="./links.html">links</a>
+        -
+        <a href="./about.html">over</a>
+      </nav>
+      <hr/></header>
+    <div id="doc"><h3 class="topic">Basic equations of motion</h3><h4 class="heading">Motion in one dimension</h4><p>
+Sup­pose a par­ti­cle moves along a line in a path <mathjax>\(x(t)\)</mathjax>.
+The veloc­ity (<mathjax>\(v(t)\)</mathjax>) and accel­er­a­tion (<mathjax>\(a(t)\)</mathjax>) are defined as
+<mathjax>\[v(t) := \diff{x}{t}, \quad a(t) := \odiff{2}{x}{t} \left(=\diff{v}{t}\right)\]</mathjax></p><p>The <em>par­ti­cle under con­stant veloc­ity</em> obeys by def­i­n­i­tion the dif­fer­en­tial equa­tion
+<mathjax>\[\diff{x}{t} = v_c\]</mathjax>
+where <mathjax>\(v_c\)</mathjax> is the given con­stant veloc­ity.
+Given an ini­tial posi­tion <mathjax>\(x(0)=x_i\)</mathjax>, this prob­lem has a unique solu­tion
+<mathjax>\[x(t) = x_i + v_c t.\]</mathjax></p><p>The <em>par­ti­cle under con­stant accel­er­a­tion</em> obeys by def­i­n­i­tion the dif­fer­en­tial equa­tion
+<mathjax>\[\odiff{2}{x}{t} = a_c\]</mathjax>
+where <mathjax>\(a_c\)</mathjax> is the given con­stant accel­er­a­tion.
+Given an ini­tial posi­tion <mathjax>\(x(0)=x_i\)</mathjax> and an ini­tial veloc­ity <mathjax>\(v(0) = v_i\)</mathjax>, this prob­lem has a unique solu­tion
+<mathjax>\[x(t) = x_i + v_it + a_c \frac{t^2}{2}.\]</mathjax></p><div class="exercise-body"><p><span class="exercise-title">Exer­cise</span> This last equa­tion is the first of five equa­tions used in ele­men­tary motion prob­lems.
+From this equa­tion, derive the remain­ing four:
+</p><ol><li><p><mathjax>\(v(t) = v_i + a_c t\)</mathjax></p></li><li><p><mathjax>\(x(t) = x_i + v(t) - a_c\frac{t^2}{2}\)</mathjax></p></li><li><p><mathjax>\(x(t) = x_i + \frac{v(t)+v_i}{2}t\)</mathjax></p></li><li><p><mathjax>\(v(t)^2 = v_i^2 + 2a_c(x(t) - x_i)\)</mathjax></p></li></ol></div><div class="solution-body"><p><span class="solution-title">Solu­tion</span> </p><ol><li><p>Take the deriv­a­tive with respect to <mathjax>\(t\)</mathjax>.</p></li><li><p>From the pre­vi­ous equa­tion, we find that <mathjax>\(v_i = v(t) - a_c t\)</mathjax>.
+We now find
+<mathjax>\[\begin{align*}
+x(t) &amp;= x_i + v_it + a_c \frac{t^2}{2}\\
+     &amp;= x_i + v(t)t - a_c t^2 + a_c \frac{t^2}{2}\\
+         &amp;= x_i + v(t)t - a_c\frac{t^2}{2}.
+\end{align*}\]</mathjax></p></li><li><p>We now have two dif­fer­ent expres­sion for <mathjax>\(x(t)\)</mathjax>.
+Let's add them together:
+<mathjax>\[\begin{align*}
+2x(t) &amp;= \left(x_i + v_it + a_c \frac{t^2}{2}\right) + \left(x_i + v(t)t - a_c\frac{t^2}{2}\right)\\
+      &amp;= 2x_i + (v_i + v(t))t\\
+ x(t) &amp;= x(t) = x_i + \frac{v(t)+v_i}{2}t.
+\end{align*}\]</mathjax></p></li><li><p>We square the expres­sion for <mathjax>\(v(t)\)</mathjax> and find after some alge­bra that
+<mathjax>\[\begin{align*}
+v(t)^2 &amp;= v_i^2 + 2v_ia_xt + a_x^2t^2\\
+       &amp;= v_i^2 + 2a_x\left(v_it + a_x\frac{t^2}{2}\right)\\
+       &amp;= v_i^2 + 2a_x(x(t) - x_i).
+\end{align*}\]</mathjax></p></li></ol></div><p>Stat­ing that a par­ti­cle is in <em>free fall</em>, is the same as stat­ing that the par­ti­cle has a con­stant accel­er­a­tion of <mathjax>\(g=9.81m/s^2\)</mathjax>.</p><h4 class="heading">Motion in two dimensions</h4><p>In two dimen­sions, the quan­ti­ties of posi­tion, veloc­ity and accel­er­a­tion form vec­tors in the plane.
+Still we have the famil­iar rela­tions
+<mathjax>\[\vec{v}(t) = \diff{\vec{r}}{t} ,\quad \vec{a}(t) = \odiff{2}{\vec{r}}{t} \left( =\diff{\vec{v}}{t}\right).\]</mathjax></p></div>
+    <footer>
+      <hr />
+      <a href="./index.html">Terug naar af</a>
+    </footer>
+  </body>
+</html>
