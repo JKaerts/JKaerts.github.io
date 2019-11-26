@@ -4,19 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Energie, explosies en eten</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+    <script type="text/javascript">
+      window.MathJax = {
+        tex: {
+          macros: {
+            R: "{\\mathbb{R}}",
+            C: "{\\mathbb{C}}",
+            dd: "{\\mathrm{d}}",
+            diff: ["{\\frac{\\dd #1 }{\\dd #2 }}", 2],
+            odiff: ["{\\frac{\\dd^{#1} #2}{\\dd #3^{#1}}}", 3]
+          }
+        }
+      };
     </script>
     <link rel="stylesheet" href="stijl.css">
   </head>
-
-  <!-- Mathjax configuration commands -->
-  $
-  \def\R{\mathbb{R}}
-  \def\C{\mathbb{C}}
-  \def\dd#1{\mathrm{d}#1}
-  $
   <body>
     <header>
       <h1>Jonas Kaerts</h1>
@@ -29,11 +34,11 @@
       </nav>
       <hr/></header>
     <div id="doc"><h3 class="topic">Energie, explosies en eten</h3><p>Op 30 okto­ber 1961, tij­dens de Koude Oor­log, bracht de Sov­je­tu­nie een kern­wapen tot ont­ploff­ing op een test­site in Nova Zem­bla. Deze bom kreeg de bij­naam ‘Tsar Bomba’ ofwel tsaren­bom. Met een energie van 50 mega­ton was de Tsar Bomba krachtiger dan alle explosieven samen die tij­dens de Tweede Werel­door­log gebruikt wer­den (inclusief de twee atoom­bom­men op Hiroshima en Nagasaki). Maar hoe groot is 50 mega­ton eigen­lijk?
-Wat stelt deze waarde voor? Om deze vra­gen te beant­wo­or­den, moet ik het eerst hebben over energie maar energie kan niet ingevo­erd wor­den zon­der het eerst te hebben over krachten.</p><h2>Energie en krachten</h2><p>In de mechan­ica spreekt men over krachten als waarneem­bare fenome­nen die de snel­heid van objecten kun­nen veran­deren. De tweede wet van New­ton zegt dat als een kracht op een object inwerkt dit object zal ver­snellen of ver­tra­gen. Als je een bak­steen omhoog houdt en loslaat, zal de zwaartekracht ervoor zor­gen dat de bak­steen steeds sneller naar bene­den zal vallen. Als je diezelfde bak­steen omhoog gooit zal de zwaartekracht eerst zijn snel­heid ver­min­deren tot­dat hij even stil­hang op de top van zijn tra­ject. Ver­vol­gens zal de bak­steen terug naar bene­den vallen.</p><p>Aangezien een snel­heid wordt uitge­drukt in meter per sec­onde (<mathjax>$m/s$</mathjax>) zal een ver­snelling uitge­drukt wor­den in meter per sec­onde per sec­onde of in meter per sec­onde kwadraat (<mathjax>$m/s^2$</mathjax>). Stel dat ik een auto ver­snel met een con­stante ver­snelling van <mathjax>$5m/s^2$</mathjax>. Dit wilt zeggen dat na iedere sec­onde de auto <mathjax>$5m/s$</mathjax> sneller zal rij­den. Als mijn auto vertrekt uit stil­stand zal hij dus na één sec­onde een snel­heid van <mathjax>$5m/s$</mathjax> hebben. Na twee sec­on­den heeft mijn auto een snel­heid van <mathjax>$10m/s$</mathjax> en na drie sec­on­den een snel­heid van <mathjax>$15m/s$</mathjax>.</p><p>De fysis­che een­heid van kracht is de New­ton (<mathjax>$N$</mathjax>). Een New­ton kan je het best begri­jpen door het te bek­ijken als een massa (in <mathjax>$kg$</mathjax>) maal een ver­snelling (in <mathjax>$m/s^2$</mathjax>). Als ik een kracht van <mathjax>$1N$</mathjax> uitoe­fen wilt dat zeggen dat ik met deze kracht een object van <mathjax>$1kg$</mathjax> een con­stante ver­snelling kan geven van <mathjax>$1m/s^2$</mathjax>. Ook kan ik met dezelfde kracht een object van <mathjax>$500g$</mathjax> een con­stante ver­snelling geven van <mathjax>$2m/s^2$</mathjax> want <mathjax>$500g$</mathjax> is gelijk aan <mathjax>$0,5kg$</mathjax> en het prod­uct van de massa en de ver­snelling is gelijk aan één. Deze redener­ing kan je ook omge­keerd maken. Als ik weet dat een bepaalde kracht een object van <mathjax>$10kg$</mathjax> een ver­snelling kan meegeven van <mathjax>$7m/s^2$</mathjax> dan zal die kracht een sterkte hebben van <mathjax>$7\times 10 N$</mathjax> ofwel <mathjax>$70N$</mathjax>.</p><p>Exper­i­menteel heeft men vast­gesteld dat de zwaartekracht van de aarde aan een object een ver­snelling kan meegeven van <mathjax>$9,81m/s^2$</mathjax>.
-Deze ver­snelling noemt men ook wel eens de <em>valver­snelling</em> en noteert men vaak met <mathjax>$g$</mathjax>. Als je dus van een toren een bak­steen laat vallen weet je dat na één sec­onde de bak­steen een snel­heid heeft van <mathjax>$9,81m/s$</mathjax> en na twee sec­on­den een snel­heid van <mathjax>$19,62m/s$</mathjax>. Valt het je op dat ik hier niets zei over de massa van de bak­steen? Door van ver­schil­lende objecten de invloed van de zwaartekracht te bepalen, kwam men tot de con­clusie dat je met vol­gende for­mule de invloed van de zwaartekracht kan bereke­nen
-<mathjax>$$(\text{zwaartekracht}) = (\text{massa})\times(\text{valversnelling}).$$</mathjax>
-Als we dit com­pacter willen opschri­jven, kun­nen we de zwaartekracht noteren met <mathjax>$F_z$</mathjax>, de massa van het object met <mathjax>$m$</mathjax> en de valver­snelling zoals hier­boven met <mathjax>$g$</mathjax>. De for­mule wordt dan degene die veel scholieren herken­nen als
-<mathjax>$$F_z = m\times g.$$</mathjax></p><p>&lt;!-- film­pje met hamer en veer: https://www.youtube.com/watch?v=5C5_dOEy­Afk --&gt;</p></div>
+Wat stelt deze waarde voor? Om deze vra­gen te beant­wo­or­den, moet ik het eerst hebben over energie maar energie kan niet ingevo­erd wor­den zon­der het eerst te hebben over krachten.</p><h2>Energie en krachten</h2><p>In de mechan­ica spreekt men over krachten als waarneem­bare fenome­nen die de snel­heid van objecten kun­nen veran­deren. De tweede wet van New­ton zegt dat als een kracht op een object inwerkt dit object zal ver­snellen of ver­tra­gen. Als je een bak­steen omhoog houdt en loslaat, zal de zwaartekracht ervoor zor­gen dat de bak­steen steeds sneller naar bene­den zal vallen. Als je diezelfde bak­steen omhoog gooit zal de zwaartekracht eerst zijn snel­heid ver­min­deren tot­dat hij even stil­hang op de top van zijn tra­ject. Ver­vol­gens zal de bak­steen terug naar bene­den vallen.</p><p>Aangezien een snel­heid wordt uitge­drukt in meter per sec­onde (<mathjax>\(m/s\)</mathjax>) zal een ver­snelling uitge­drukt wor­den in meter per sec­onde per sec­onde of in meter per sec­onde kwadraat (<mathjax>\(m/s^2\)</mathjax>). Stel dat ik een auto ver­snel met een con­stante ver­snelling van <mathjax>\(5m/s^2\)</mathjax>. Dit wilt zeggen dat na iedere sec­onde de auto <mathjax>\(5m/s\)</mathjax> sneller zal rij­den. Als mijn auto vertrekt uit stil­stand zal hij dus na één sec­onde een snel­heid van <mathjax>\(5m/s\)</mathjax> hebben. Na twee sec­on­den heeft mijn auto een snel­heid van <mathjax>\(10m/s\)</mathjax> en na drie sec­on­den een snel­heid van <mathjax>\(15m/s\)</mathjax>.</p><p>De fysis­che een­heid van kracht is de New­ton (<mathjax>\(N\)</mathjax>). Een New­ton kan je het best begri­jpen door het te bek­ijken als een massa (in <mathjax>\(kg\)</mathjax>) maal een ver­snelling (in <mathjax>\(m/s^2\)</mathjax>). Als ik een kracht van <mathjax>\(1N\)</mathjax> uitoe­fen wilt dat zeggen dat ik met deze kracht een object van <mathjax>\(1kg\)</mathjax> een con­stante ver­snelling kan geven van <mathjax>\(1m/s^2\)</mathjax>. Ook kan ik met dezelfde kracht een object van <mathjax>\(500g\)</mathjax> een con­stante ver­snelling geven van <mathjax>\(2m/s^2\)</mathjax> want <mathjax>\(500g\)</mathjax> is gelijk aan <mathjax>\(0,5kg\)</mathjax> en het prod­uct van de massa en de ver­snelling is gelijk aan één. Deze redener­ing kan je ook omge­keerd maken. Als ik weet dat een bepaalde kracht een object van <mathjax>\(10kg\)</mathjax> een ver­snelling kan meegeven van <mathjax>\(7m/s^2\)</mathjax> dan zal die kracht een sterkte hebben van <mathjax>\(7\times 10 N\)</mathjax> ofwel <mathjax>\(70N\)</mathjax>.</p><p>Exper­i­menteel heeft men vast­gesteld dat de zwaartekracht van de aarde aan een object een ver­snelling kan meegeven van <mathjax>\(9,81m/s^2\)</mathjax>.
+Deze ver­snelling noemt men ook wel eens de <em>valver­snelling</em> en noteert men vaak met <mathjax>\(g\)</mathjax>. Als je dus van een toren een bak­steen laat vallen weet je dat na één sec­onde de bak­steen een snel­heid heeft van <mathjax>\(9,81m/s\)</mathjax> en na twee sec­on­den een snel­heid van <mathjax>\(19,62m/s\)</mathjax>. Valt het je op dat ik hier niets zei over de massa van de bak­steen? Door van ver­schil­lende objecten de invloed van de zwaartekracht te bepalen, kwam men tot de con­clusie dat je met vol­gende for­mule de invloed van de zwaartekracht kan bereke­nen
+<mathjax>\[(\text{zwaartekracht}) = (\text{massa})\times(\text{valversnelling}).\]</mathjax>
+Als we dit com­pacter willen opschri­jven, kun­nen we de zwaartekracht noteren met <mathjax>\(F_z\)</mathjax>, de massa van het object met <mathjax>\(m\)</mathjax> en de valver­snelling zoals hier­boven met <mathjax>\(g\)</mathjax>. De for­mule wordt dan degene die veel scholieren herken­nen als
+<mathjax>\[F_z = m\times g.\]</mathjax></p><p>&lt;!-- film­pje met hamer en veer: https://www.youtube.com/watch?v=5C5_dOEy­Afk --&gt;</p></div>
     <footer>
       <hr />
       <a href="./index.html">Terug naar af</a>
