@@ -28,9 +28,9 @@
 ;The tag functions
 ;;Math
 (define ($ . elements)
-  `(mathjax ,(apply string-append `("$" ,@elements "$"))))
+  `(mathjax ,(apply string-append `("\\(" ,@elements "\\)"))))
 (define ($$ . elements)
-  `(mathjax ,(apply string-append `("$$" ,@elements "$$"))))
+  `(mathjax ,(apply string-append `("\\[" ,@elements "\\]"))))
 
 ;;Headings
 (define-syntax-rule (define-heading heading-name tag)
