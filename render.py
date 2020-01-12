@@ -1,0 +1,11 @@
+from jinja2 import Environment, FileSystemLoader
+
+file_loader = FileSystemLoader('templates')
+env = Environment(loader=file_loader)
+
+TEMPLATES = ['basic_physics-01-basic_motion']
+
+for template_name in TEMPLATES:
+    template = env.get_template(template_name + '.html')
+    with open(template_name + '.html', 'w') as outfile:
+        outfile.write(template.render())
