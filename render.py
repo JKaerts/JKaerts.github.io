@@ -7,7 +7,9 @@ TEMPLATES = [
     'about',
     'basic_physics-01-basic_motion', 
     'complex_function_real_variable',
-    'documenten']
+    'documenten',
+    'energie',
+    'index']
 
 for template_name in TEMPLATES:
     template = env.get_template(template_name + '.html')
