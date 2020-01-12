@@ -9,7 +9,12 @@ TEMPLATES = [
     'complex_function_real_variable',
     'documenten',
     'energie',
-    'index']
+    'index',
+    'links',
+    'minmaalmin',
+    'parabolen',
+    'subgroups',
+    'tikz_dsl_1']
 
 for template_name in TEMPLATES:
     template = env.get_template(template_name + '.html')

@@ -51,18 +51,14 @@ This allows us to make macros for simple versions of each component, which can b
 Let's put this idea into practice.
 </p>
 <p>
-<h5>A tank of water</h5>
+<subsection>A tank of water</subsection>
 </p>
 <p>
 We will define a macro <tt>\drawtank</tt> which takes one mandatory and one optional argument.
 The goal is to make the command <tt>\drawtank{0.3}</tt> draw a tank of 1cm by 1cm which is 30% filled with water.
 The optional argument allows us to pass arguments to the tikz drawing commands.
-This way we can use <tt>\drawtank{0.7}[shift={(1cm, 2cm)}, xscale=2, yscale=4]</tt> to draw a tank of 2cm by 4cm, 70% filled, with its lower left corner at the coordinates (1cm, 2cm).
+This way we can use <tt>\drawtank{0.7}[shift={(1cm, 2cm)}, xscale=2, yscale=4]</tt> to draw a tank of 2cm by 4cm, 70% filled, with its lower left corner at the coordinates (1cm, 2cm).</p><p>How do we implement this macro? In order to efficiently handle optional arguments we can use the package <tt>xparse</tt>.
 </p>
-<p>
-How do we implement this macro? In order to efficiently handle optional arguments we can use the package <tt>xparse</tt>.
-</p>
-{% raw %}
 <pre>
 \NewDocumentCommand{\drawtank}{ m o }{%
   \def\tank{(0,1) -- (0,0) -- (1,0) -- (1,1)}
@@ -71,6 +67,5 @@ How do we implement this macro? In order to efficiently handle optional argument
     {\draw[#2] \tank; \draw[#2] \water;}
     {\draw \tank; \draw \water;}
 }
-</pre>
-{% endraw %}
+</pre></div>
 {% endblock %}
