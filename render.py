@@ -3,7 +3,11 @@ from jinja2 import Environment, FileSystemLoader
 file_loader = FileSystemLoader('templates')
 env = Environment(loader=file_loader)
 
-TEMPLATES = ['basic_physics-01-basic_motion']
+TEMPLATES = [
+    'about',
+    'basic_physics-01-basic_motion', 
+    'complex_function_real_variable',
+    'documenten']
 
 for template_name in TEMPLATES:
     template = env.get_template(template_name + '.html')
