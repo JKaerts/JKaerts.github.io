@@ -97,7 +97,7 @@ Let's add them together:
       &amp;= 2x_i + (v_i + v(t))t\\
  x(t) &amp;= x(t) = x_i + \frac{v(t)+v_i}{2}t.
 \end{align*}\]</p></li>
-  <li><p>We square the expression for <mathjax>\(v(t)\)</mathjax> and find after some algebra that
+  <li><p>We square the expression for \(v(t)\) and find after some algebra that
 \[\begin{align*}
 v(t)^2 &amp;= v_i^2 + 2v_ia_xt + a_x^2t^2\\
        &amp;= v_i^2 + 2a_x\left(v_it + a_x\frac{t^2}{2}\right)\\
@@ -108,7 +108,44 @@ v(t)^2 &amp;= v_i^2 + 2v_ia_xt + a_x^2t^2\\
 </div>
 <p>
 Stating that a particle is in <em>free fall</em>, is the same as stating that the particle has a constant acceleration of \(g=9.81m/s^2\).
+The following exercise is a classic problem of motion in one dimension.
 </p>
+<div class="exercise-body">
+<span class="exercise-title">Exercise</span>
+
+A stone is thrown straight upwards from the top of a building \(50m\) high.
+Its initial velocity is \(20\tfrac{m}{s}\).
+The stone just misses the edge of the roof on its way down.
+<ol>
+  <li>Determine the time at which the stone hits its maximal height (the stone is thrown at \(t=0\)).</li>
+  <li>Determine the maximal height of the stone.</li>
+  <li>Find the velocity of the stone when it again reaches a height of \(50m\).</li>
+  <li>Determine the position and the velocity of the stone after \(5s\).</li>
+</ol>
+
+</div>
+<div class="solution-body">
+<span class="solution-title">Solution</span>
+
+<ol>
+  <li>The maximal height of the stone is the turning point of the motion.
+  At this point the velocity is zero.
+  We can use the formula for velocity in terms of time:
+  \[v(t) = v_i - gt\]
+  Now \(v(t) = 0\) by the above reasoning so
+  \[t = \frac{20}{9.81} = 2.04.\]
+  After \(2.04s\) the stone reaches maximal height.</li>
+  <li>The height as a function of time is given by
+  \[x(t) = 50 - 20t + 9.81\frac{t^2}{2}\]
+  where we already took the liberty of entering the values for \(x_i\) and \(v_i\).
+  Simply enter the time found above to find
+  \[x(2.04) = 70.4.\]
+  The maximal height is therefore \(70.4m\), or \(20.4m\) above the roof of the building</li>
+  <li></li>
+  <li></li>
+</ol>
+
+</div>
 
 <h4 class="heading">Motion in two dimensions</h4>
 <p>
