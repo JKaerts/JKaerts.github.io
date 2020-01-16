@@ -1,3 +1,24 @@
+{% macro theorem() -%}
+<div class="theorem-body">
+<span class="theorem-title">Theorem</span>
+{{ caller() }}
+</div>
+{%- endmacro %}
+
+{% macro exercise() -%}
+<div class="exercise-body">
+<span class="exercise-title">Exercise</span>
+{{ caller() }}
+</div>
+{%- endmacro %}
+
+{% macro solution() -%}
+<div class="solution-body">
+<span class="solution-title">Solution</span>
+{{ caller() }}
+</div>
+{%- endmacro %}
+
 <!DOCTYPE html>
 <html>
   <head>

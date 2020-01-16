@@ -59,6 +59,7 @@ The goal is to make the command <tt>\drawtank{0.3}</tt> draw a tank of 1cm by 1c
 The optional argument allows us to pass arguments to the tikz drawing commands.
 This way we can use <tt>\drawtank{0.7}[shift={(1cm, 2cm)}, xscale=2, yscale=4]</tt> to draw a tank of 2cm by 4cm, 70% filled, with its lower left corner at the coordinates (1cm, 2cm).</p><p>How do we implement this macro? In order to efficiently handle optional arguments we can use the package <tt>xparse</tt>.
 </p>
+{% raw %}
 <pre>
 \NewDocumentCommand{\drawtank}{ m o }{%
   \def\tank{(0,1) -- (0,0) -- (1,0) -- (1,1)}
@@ -67,5 +68,7 @@ This way we can use <tt>\drawtank{0.7}[shift={(1cm, 2cm)}, xscale=2, yscale=4]</
     {\draw[#2] \tank; \draw[#2] \water;}
     {\draw \tank; \draw \water;}
 }
-</pre></div>
+</pre>
+{% endraw %}
+</div>
 {% endblock %}

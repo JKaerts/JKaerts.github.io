@@ -7,8 +7,7 @@
 <p>This page is an experiment in gradual exposition for a maths proof.
 Try clicking on the plus-signs near the end of the proof.
 </p>
-<div class="theorem-body">
-<span class="theorem-title">Theorem</span>
+{% call theorem() %}
 Let \(H\) be a nonempty subset of a group \(G,*\).
 The following three statements are equivalent:
 <ol>
@@ -16,7 +15,7 @@ The following three statements are equivalent:
   <li>\(\forall x, y\in H: x*y\in H\) and \(x^{-1}\in H\)</li>
   <li>\(\forall x, y\in H: x*y^{-1}\in H\)</li>
 </ol>
-</div>
+{% endcall %}
 <p>
 <em>Proof:</em> We first show that the second statement follows from the first. This is immediate from the definition of a group.
 </p>
