@@ -61,16 +61,14 @@
 (define numbered-list (make-list-function 'ol))
 
 ;; Theorems
-(define-syntax-rule (define-theorem theorem-name display-name)
+(define-syntax-rule (define-theorem theorem-name)
   (define (theorem-name . elements)
-    `(div ((class ,(string-append (symbol->string 'theorem-name) "-body")))
-          (span ((class ,(string-append (symbol->string 'theorem-name) "-title"))) ,(symbol->string 'display-name))
-          " "
+    `(div ((class ,(symbol->string 'theorem-name)))
           ,@elements)))
 
-(define-theorem theorem Theorem)
-(define-theorem exercise Exercise)
-(define-theorem solution Solution)
+(define-theorem theorem)
+(define-theorem exercise)
+(define-theorem solution)
 
 ;;Exposition
 (define (exposition . elements)

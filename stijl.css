@@ -42,19 +42,25 @@ h1,h2,h3{
     right: -1px; bottom: 1rem;
 }
 
-.theorem-body {
+.theorem {
     font-style: italic;
 }
 
-.theorem-title {
+.theorem::before {
     font-style: normal;
     font-weight: bold;
+	content: "Theorem. ";
 }
 
-.exercise-title {
+.exercise {}
+.exercise::before {
     font-weight: bold;
+	content: "Exercise. "
 }
 
-.solution-title{
+
+.solution{}
+.solution::before{
     font-style: italic;
+	content: "Solution. "
 }
