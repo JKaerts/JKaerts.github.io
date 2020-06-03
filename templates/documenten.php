@@ -1,5 +1,5 @@
 <?php 
-$title="Schrijfsels"
+$title="Schrijfsels";
 include("header.php");
 ?>
 

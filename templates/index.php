@@ -1,5 +1,5 @@
 <?php 
-$title="Welkom!"
+$title="Welkom!";
 include("header.php");
 ?>
 

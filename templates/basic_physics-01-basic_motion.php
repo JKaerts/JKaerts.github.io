@@ -1,40 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Basic equations of motion</title>
-    <script type="text/javascript" id="MathJax-script" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-    </script>
-    <script type="text/javascript">
-      window.MathJax = {
-        tex: {
-          macros: {
-            R: "{\\mathbb{R}}",
-            C: "{\\mathbb{C}}",
-            dd: "{\\mathrm{d}}",
-            diff: ["{\\frac{\\dd #1 }{\\dd #2 }}", 2],
-            odiff: ["{\\frac{\\dd^{#1} #2}{\\dd #3^{#1}}}", 3]
-          }
-        }
-      };
-    </script>
-    <link rel="stylesheet" href="stijl.css">
-  </head>
-  <body>
-	<header>
-      <h1>Jonas Kaerts</h1>
-      <nav>
-        <a href="./documenten.html">schrijfsels</a>
-        -
-        <a href="./links.html">links</a>
-        -
-        <a href="./about.html">over</a>
-      </nav>
-      <hr/>
-	</header>
-<h3 class="topic">Basic equations of motion</h3>
+<?php 
+$title="Basic equations of motion";
+include("header.php");
+include("base.php");
+?>
+
+<h3 class="topic"><?= $title ?></h3>
 <h4 class="heading">Motion in one dimension</h4>
 
 <p>
@@ -56,7 +26,8 @@ where \(a_c\) is the given constant acceleration.
 Given an initial position \(x(0)=x_i\) and an initial velocity \(v(0) = v_i\), this problem has a unique solution
 \[x(t) = x_i + v_it + a_c \frac{t^2}{2}.\]
 </p>
-<div class="exercise-body"><span class="exercise-title">Exercise</span>This last equation is the first of five equations used in elementary motion problems.
+<?= exercise() ?>
+This last equation is the first of five equations used in elementary motion problems.
 From this equation, derive the remaining four:
 <ol>
   <li>\(v(t) = v_i + a_c t\)</li>
@@ -64,7 +35,9 @@ From this equation, derive the remaining four:
   <li>\(x(t) = x_i + \frac{v(t)+v_i}{2}t\)</li>
   <li>\(v(t)^2 = v_i^2 + 2a_c(x(t) - x_i)\)</li>
 </ol>
-</div><div class="solution-body"><span class="solution-title">Solution</span><ol>
+<?= endexercise() ?>
+<?= solution() ?>
+<ol>
   <li>Take the derivative with respect to \(t\).</li>
   <li><p>From the previous equation, we find that \(v_i = v(t) - a_c t\).
 We now find
@@ -87,11 +60,13 @@ v(t)^2 &amp;= v_i^2 + 2v_ia_xt + a_x^2t^2\\
        &amp;= v_i^2 + 2a_x(x(t) - x_i).
 \end{align*}\]</p></li>
 </ol>
-</div><p>
+<?= endsolution() ?>
+<p>
 Stating that a particle is in <em>free fall</em>, is the same as stating that the particle has a constant acceleration of \(g=9.81m/s^2\).
 The following exercise is a classic problem of motion in one dimension.
 </p>
-<div class="exercise-body"><span class="exercise-title">Exercise</span>A stone is thrown straight upwards from the top of a building \(50m\) high.
+<?= exercise() ?>
+A stone is thrown straight upwards from the top of a building \(50m\) high.
 Its initial velocity is \(20\tfrac{m}{s}\).
 The stone just misses the edge of the roof on its way down.
 <ol>
@@ -100,7 +75,9 @@ The stone just misses the edge of the roof on its way down.
   <li>Find the velocity of the stone when it again reaches a height of \(50m\).</li>
   <li>Determine the position and the velocity of the stone after \(5s\).</li>
 </ol>
-</div><div class="solution-body"><span class="solution-title">Solution</span><ol>
+<?= endexercise() ?>
+<?= solution() ?>
+<ol>
   <li>The maximal height of the stone is the turning point of the motion.
   At this point the velocity is zero.
   We can use the formula for velocity in terms of time:
@@ -117,7 +94,8 @@ The stone just misses the edge of the roof on its way down.
   <li></li>
   <li></li>
 </ol>
-</div>
+<?= endsolution() ?>
+
 <h4 class="heading">Motion in two dimensions</h4>
 <p>
 In two dimensions, the quantities of position, velocity and acceleration form vectors in the plane.
@@ -125,9 +103,6 @@ Still we have the familiar relations
 \[\vec{v}(t) = \diff{\vec{r}}{t} ,\quad \vec{a}(t) = \odiff{2}{\vec{r}}{t} \left( =\diff{\vec{v}}{t}\right).\]
 </p>
 
-    <footer>
-      <hr />
-      <a href="./index.html">Terug naar af</a>
-    </footer>
-  </body>
-</html>
+<?php 
+include("footer.php");
+?>
