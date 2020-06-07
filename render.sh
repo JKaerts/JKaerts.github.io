@@ -1,7 +1,12 @@
 declare -a files=("about"
                   "basic_physics-01-basic_motion"
-                  "index"
+				  "complex_function_real_variable"
 				  "documenten"
+				  "energie"
+                  "index"
+				  "links"
+				  "minmaalmin"
+				  "parabolen"
 				  )
 
 for file in "${files[@]}"
