@@ -1,51 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The subgroup criterion</title>
-    <script type="text/javascript" id="MathJax-script" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-    </script>
-    <script type="text/javascript">
-      window.MathJax = {
-        tex: {
-          macros: {
-            R: "{\\mathbb{R}}",
-            C: "{\\mathbb{C}}",
-            dd: "{\\mathrm{d}}",
-            diff: ["{\\frac{\\dd #1 }{\\dd #2 }}", 2],
-            odiff: ["{\\frac{\\dd^{#1} #2}{\\dd #3^{#1}}}", 3]
-          }
-        }
-      };
-    </script>
-    <link rel="stylesheet" href="stijl.css">
-  </head>
-  <body>
-	<header>
-      <h1>Jonas Kaerts</h1>
-      <nav>
-        <a href="./documenten.html">schrijfsels</a>
-        -
-        <a href="./links.html">links</a>
-        -
-        <a href="./about.html">over</a>
-      </nav>
-      <hr/>
-	</header>
-<h3 class="topic">The subgroup criterion</h3>
+<?php 
+$title="The subgroup criterion";
+include("header.php");
+include("base.php");
+?>
+
+<h3 class="topic"><?= $title ?></h3>
 <p>This page is an experiment in gradual exposition for a maths proof.
 Try clicking on the plus-signs near the end of the proof.
 </p>
-<div class="theorem-body"><span class="theorem-title">Theorem</span>Let \(H\) be a nonempty subset of a group \(G,*\).
+<?= theorem() ?>
+Let \(H\) be a nonempty subset of a group \(G,*\).
 The following three statements are equivalent:
 <ol>
   <li>\(H\) is a subgroup of \(G,*\).</li>
   <li>\(\forall x, y\in H: x*y\in H\) and \(x^{-1}\in H\)</li>
   <li>\(\forall x, y\in H: x*y^{-1}\in H\)</li>
 </ol>
-</div><p>
+<?= endtheorem() ?>
+<p>
 <em>Proof:</em> We first show that the second statement follows from the first. This is immediate from the definition of a group.
 </p>
 <p>
@@ -72,9 +44,6 @@ This proves that \(H\) is a group.
 </p>
 </div>
 
-    <footer>
-      <hr />
-      <a href="./index.html">Terug naar af</a>
-    </footer>
-  </body>
-</html>
+<?php 
+include("footer.php");
+?>

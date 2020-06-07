@@ -7,6 +7,8 @@ declare -a files=("about"
 				  "links"
 				  "minmaalmin"
 				  "parabolen"
+				  "subgroups"
+				  "tikz_dsl_1"
 				  )
 
 for file in "${files[@]}"
