@@ -1,10 +1,10 @@
 <?php 
 $title="Complex functions of a real variable";
 include("header.php");
-include("base.php");
 ?>
 
-<h3 class="topic"><?= $title ?></h3>
+<?= topic($title) ?>
+
 <p>
 Just like a real function of a real variable, we can consider complex functions of a real variable.
 These are functions of the form

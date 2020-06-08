@@ -3,7 +3,8 @@ $title="Min maal min is plus";
 include("header.php");
 ?>
 
-<h3 class="topic"><?= $title ?></h3>
+<?= topic($title) ?>
+
 <p>
 Rekenen blijft de logica zelve zolang we ons beperken tot de natuurlijke getallen.
 Twee getallen bij elkaar optellen is dan voldoende keren de operatie \(+1\) uitvoeren en twee getallen vermenigvuldigen is dan eigenlijk herhaalde optelling.

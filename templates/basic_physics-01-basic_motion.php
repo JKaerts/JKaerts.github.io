@@ -1,10 +1,10 @@
 <?php 
 $title="Basic equations of motion";
 include("header.php");
-include("base.php");
 ?>
 
-<h3 class="topic"><?= $title ?></h3>
+<?= topic($title) ?>
+
 <h4 class="heading">Motion in one dimension</h4>
 
 <p>

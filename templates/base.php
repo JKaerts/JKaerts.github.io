@@ -29,4 +29,8 @@ function endsolution()
 	return "</div>";
 }
 
+function topic($title)
+{
+	return "<h3 class=\"topic\">$title</h3>";
+}
 ?>

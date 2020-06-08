@@ -3,7 +3,8 @@ $title="Parabolen";
 include("header.php");
 ?>
 
-<h3 class="topic"><?= $title ?></h3>
+<?= topic($title) ?>
+
 <h4 class="heading">Inleiding</h4>
 <p>
 Een functie is een machine die iets (een getal, een object, ...) aanneemt en iets anders teruggeeft volgens welbepaalde regels.

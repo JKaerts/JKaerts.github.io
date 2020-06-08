@@ -1,10 +1,10 @@
 <?php 
 $title="The subgroup criterion";
 include("header.php");
-include("base.php");
 ?>
 
-<h3 class="topic"><?= $title ?></h3>
+<?= topic($title) ?>
+
 <p>This page is an experiment in gradual exposition for a maths proof.
 Try clicking on the plus-signs near the end of the proof.
 </p>

@@ -3,7 +3,8 @@ $title="Welkom!";
 include("header.php");
 ?>
 
-<h3 class="topic"><?= $title ?></h3>
+<?= topic($title) ?>
+
 <p>
 Ik ben Jonas. Overdag ben ik praktijkassistent aan de KU Leuven. In mijn vrije tijd ben ik recreatief programmeur.
 </p>

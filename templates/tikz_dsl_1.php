@@ -3,7 +3,8 @@ $title="Creating a small DSL in TikZ, part 1: The primitives";
 include("header.php");
 ?>
 
-<h3 class="topic"><?= $title ?></h3>
+<?= topic($title) ?>
+
 <h4 class="heading">Background</h4>
 <p>
 For a class on linear algebra we added a part on linear system theory a few years ago.
