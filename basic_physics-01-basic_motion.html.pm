@@ -1,5 +1,7 @@
 #lang pollen
 
+◊(define-meta title "Basic equations of motion")
+
 ◊topic{Basic equations of motion}
 
 ◊heading{Motion in one dimension}

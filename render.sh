@@ -1,6 +1,4 @@
-declare -a files=("about"
-                  "basic_physics-01-basic_motion"
-				  "complex_function_real_variable"
+declare -a files=("complex_function_real_variable"
 				  "documenten"
 				  "energie"
                   "index"
