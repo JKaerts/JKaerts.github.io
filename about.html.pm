@@ -1,6 +1,6 @@
 #lang pollen
 
-◊define-meta[title]{"Over deze site"}
+◊define-meta[title]{Over deze site}
 
 
 ◊topic{Over deze site}
