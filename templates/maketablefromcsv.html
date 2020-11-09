@@ -1,15 +1,15 @@
-<?php 
-$title="Moving from csv files to SQLite tables";
-include("header.php");
-?>
+{% extends "base.html" %}
 
-<?= topic($title) ?>
+{% block title %}Moving from csv files to SQLite tables{% endblock %}
+
+{% block content %}
+<h2>{{ self.title() }}</h2>
 <p>
 After following a couple tutorials on SQL I wanted to convert some tabular data on my computer to a SQLite database.
 Here is a quick summary of the steps I followed in order to convert my list of cd's to a relational database.
 </p>
 
-<?= heading("Prerequisites") ?>
+<h3>Prerequisites</h3>
 <p>
 I used the following things.
 </p>
@@ -19,9 +19,7 @@ I used the following things.
   <li>A csv-file containing your data: I will assume the csv-file is delimited by commas and has a header.</li>
 </ul>
 
-<?= heading("Making a single table") ?>
-
-
+<h3>Making a single table</h3>
 
 <pre>
 -- load data.csv into a temporary table
@@ -43,7 +41,4 @@ create table finances as
 -- Clean the raw data
 drop table raw_finances;
 </pre>
-
-<?php 
-include("footer.php");
-?>
+{% endblock %}
