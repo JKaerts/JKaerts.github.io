@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>VIM Cheatsheet</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="./stijl.css">
+	</head>
+	<body>
+		<header>
+			<h1>Jonas Kaerts</h1>
+			<nav>
+				<a href="./index.html">Home</a>
+				-
+				<a href="./documenten.html">Schrijfsels</a>
+				-
+				<a href="./links.html">Links</a>
+				-
+				<a href="./about.html">Over</a>
+			</nav>
+			<hr>
+		</header>
+		<h2>VIM cheatsheet</h2>
+
+		<h3>Splitting windows</h3>
+		<table>
+			<tr>
+				<td><code>:split</code></td>
+				<td>Split window horizontally</td>
+			</tr>
+			<tr>
+				<td><code>:vsplit</code></td>
+				<td>Split window vertically</td>
+			</tr>
+		</table>
+		<p>
+		You can navigate a split window using <code>Ctrl-w</code> followed by <code>hjkl</code> or the arrow keys.
+		Closing the pane currently in focus is done with <code>Ctrl-w</code> followed by <code>q</code>.
+		</p>
+
+		<h3>Buffers</h3>
+		<table>
+			<tr>
+				<td><code>:buffers</code></td>
+				<td>Show a list of all buffers</td>
+			</tr>
+			<tr>
+				<td><code>:ls</code></td>
+				<td>Same as above</td>
+			</tr>
+			<tr>
+				<td><code>:b &lt;number&gt;</code></td>
+				<td>Show the buffer with the given number.</td>
+			</tr>
+			<tr>
+				<td><code>:b &lt;name&gt;</code></td>
+				<td>Show the buffer with the given (partial) name. Tab completion is available.</td>
+			</tr>
+			<tr>
+				<td><code>:bd &lt;nummer&gt;</code></td>
+				<td>Delete the buffer with the given number (current buffer if absent). Fails if there are unsaved changes.</td>
+			</tr>
+			<tr>
+				<td><code>:bd! &lt;nummer&gt;</code></td>
+				<td>Same as above but discards any unsaved changes.</td>
+			</tr>
+		</table>
+	</body>
+</html>
